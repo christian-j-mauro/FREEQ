@@ -20,7 +20,7 @@ struct ChainSettings
 ChainSettings getChainSettings(juce::AudioProcessorValueTreeState& apvts);
 
 //==============================================================================
-/**
+/** 
 */
 class FREEQAudioProcessor  : public juce::AudioProcessor
 {

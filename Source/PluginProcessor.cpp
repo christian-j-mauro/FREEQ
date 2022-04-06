@@ -224,23 +224,23 @@ juce::AudioProcessorValueTreeState::ParameterLayout
         juce::AudioProcessorValueTreeState::ParameterLayout layout;
         // Low cut band
         layout.add(std::make_unique<juce::AudioParameterFloat>
-        ("LowCut Freqency", ":LowCut Freqency", juce::NormalisableRange<float>(20.f, 20000.f, 1.f, 1.f), 20.f));
+        ("LowCut Freqency", ":LowCut Freqency", juce::NormalisableRange<float>(20.f, 20000.f, 1.f, 0.25f), 20.f));
 
         //High cut band     
         layout.add(std::make_unique<juce::AudioParameterFloat>
-        ("HighCut Freqency", ":HighCut Freqency", juce::NormalisableRange<float>(20.f, 20000.f, 1.f, 1.f), 20000.f));
+        ("HighCut Freqency", ":HighCut Freqency", juce::NormalisableRange<float>(20.f, 20000.f, 1.f, 0.25f), 20000.f));
 
         //Peak cut band
         layout.add(std::make_unique<juce::AudioParameterFloat>
-        ("Peak Freqency", ":Peak Freqency", juce::NormalisableRange<float>(20.f, 20000.f, 1.f, 1.f), 750.f));
+        ("Peak Freqency", ":Peak Freqency", juce::NormalisableRange<float>(20.f, 20000.f, 1.f, 0.25f), 750.f));
 
         //Peak gain band
         layout.add(std::make_unique<juce::AudioParameterFloat>
-        ("Peak Gain", ":Peak Gain", juce::NormalisableRange<float>(-24.f, 24.f, 0.5f, 1.f), 0.0f));
+        ("Peak Gain", ":Peak Gain", juce::NormalisableRange<float>(-24.f, 24.f, 0.5f, 0.25f), 0.0f));
 
         //Peak quality band
         layout.add(std::make_unique<juce::AudioParameterFloat>
-        ("Peak Quality", ":Peak Quality", juce::NormalisableRange<float>(0.1f, 10.f, 0.05f, 1.f), 1.f));
+        ("Peak Quality", ":Peak Quality", juce::NormalisableRange<float>(0.1f, 10.f, 0.05f, 0.25f), 7.5f));
 
         juce::StringArray stringArray;
         for(int i = 0; i < 4; ++i)
